@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
 	f "github.com/fauna/faunadb-go/faunadb"
 )
@@ -10,7 +11,7 @@ import (
 func main() {
 
 	// Instantiate the client
-	client := f.NewFaunaClient("YOUR_FAUNADB_SECRET")
+	client := f.NewFaunaClient(os.Getenv("FAUNA_DB_SECRET"))
 
 	// Create a database
 	result, err := client.Query(f.CreateDatabase(f.Obj{"name": "my_app"}))
