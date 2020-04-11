@@ -1,8 +1,8 @@
 ## faunadb-tutorial
 
-## Links
-
 https://fauna.com/
+
+## Links
 
 https://dashboard.fauna.com/
 
